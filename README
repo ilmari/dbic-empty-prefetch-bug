@@ -1,0 +1,26 @@
+
+#   Failed test 'baz cache'
+#   at t/empty-link-prefetch.t line 45.
+
+#   Failed test 'no db hit'
+#   at t/empty-link-prefetch.t line 18.
+# SELECT baz.id FROM bars me  JOIN bazzes baz ON baz.id = me.baz_id WHERE ( me.foo_id = ? ): '1'
+# creating related baz
+# Looks like you failed 2 tests of 5.
+t/empty-link-prefetch.t .. 
+ok 1 - bar cache
+not ok 2 - baz cache
+not ok 3 - no db hit
+ok 4 - bar cache
+ok 5 - baz cache
+1..5
+Dubious, test returned 2 (wstat 512, 0x200)
+Failed 2/5 subtests 
+
+Test Summary Report
+-------------------
+t/empty-link-prefetch.t (Wstat: 512 Tests: 5 Failed: 2)
+  Failed tests:  2-3
+  Non-zero exit status: 2
+Files=1, Tests=5,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.27 cusr  0.01 csys =  0.31 CPU)
+Result: FAIL
